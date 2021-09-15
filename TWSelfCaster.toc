@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: TW Self Caster
+## Author: Xerron/Er
+## Version: 0
+## Notes: Damn auto self cast
+## SavedVariablesPerCharacter: SELF_CONFIG
+TWSelfCaster.lua
