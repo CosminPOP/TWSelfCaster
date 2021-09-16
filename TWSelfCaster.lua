@@ -13,10 +13,17 @@ s:SetScript("OnEvent", function()
             end
         end
         if event == "VARIABLES_LOADED" then
+            if not SELF_CONFIG then
+                SELF_CONFIG = {}
+                SELF_CONFIG[UnitName('player')] = GetCVar("autoSelfCast")
+            end
             SetCVar("autoSelfCast", SELF_CONFIG[UnitName('player')] )
         end
         if event == "CVAR_UPDATE" then
             if arg1 == 'AUTO_SELF_CAST_TEXT' then
+                if not SELF_CONFIG then
+                    SELF_CONFIG = {}
+                end
                 SELF_CONFIG[UnitName('player')] = GetCVar("autoSelfCast")
             end
         end
